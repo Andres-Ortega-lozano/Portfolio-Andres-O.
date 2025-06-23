@@ -777,3 +777,43 @@ progress::-webkit-progress-value {
     margin-bottom: 0;
   }
 }
+
+@media (max-width: 480px) {
+  body,
+  html {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    padding: 1rem;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+
+  .hero-image {
+    height: 200px; /* Adjust height to avoid too much zoom */
+    width: 100%; /* Make sure it fits the screen */
+    background-image: var(--image);
+    background-size: contain !important; /* Show whole image without cropping */
+    background-position: center top !important; /* Adjust position */
+    background-repeat: no-repeat !important;
+    background-attachment: var(--attachment);
+  }
+
+  .hero-image-opacity {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hero-opacity-color);
+    text-align: center;
+  }
+
+  .hero-image-title {
+    font-size: 5vw;
+    color: var(--hero-text-color);
+  }
+}
