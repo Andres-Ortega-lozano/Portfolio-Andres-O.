@@ -454,7 +454,9 @@ progress::-webkit-progress-value {
   padding: 1rem;
   display: flex;
   flex-direction: column;
+  height: 90vh;
   max-width: 400px;
+
   background-color: var(--white-color);
   border: thin solid var(--first-color);
 }
@@ -733,6 +735,16 @@ progress::-webkit-progress-value {
     display: grid;
     grid-template-columns: repeat(2, 45%);
   }
+
+  .team {
+    margin: 2rem;
+    padding: 2rem 0;
+    max-width: 60%;
+    text-align: center;
+    background-color: var(--team-bg-color);
+    overflow-x: hidden;
+    margin-left: 20vw;
+  }
 }
 /******* desktop version  *********/
 
@@ -778,5 +790,12 @@ progress::-webkit-progress-value {
 
   .footer {
     margin-bottom: 0;
+  }
+}
+
+/* For Mobile - Click Interaction */
+@media (max-width: 600px) {
+  .portfolio-card:hover > .portfolio-card-info {
+    display: none;
   }
 }
