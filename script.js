@@ -55,7 +55,7 @@ $form.addEventListener("submit", (e)=> {
         $loader.classList.add("none");
         setTimeout(() => {
             location.hash = "#close";
-        }, 3000);
+        }, 2000);
        });
 })
 })(document);

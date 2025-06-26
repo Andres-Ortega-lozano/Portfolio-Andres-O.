@@ -798,4 +798,23 @@ progress::-webkit-progress-value {
   .portfolio-card:hover > .portfolio-card-info {
     display: none;
   }
+
+  .modal-window {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 600px;
+    max-width: 400px;
+
+    background-color: var(--white-color);
+    border: thin solid var(--first-color);
+  }
+
+  .modal-window > img {
+    max-width: 80%;
+    height: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
