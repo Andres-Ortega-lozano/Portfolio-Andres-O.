@@ -35,6 +35,10 @@ html {
   box-sizing: inherit;
 }
 
+body:has(.modal:target) {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -478,11 +482,30 @@ progress::-webkit-progress-value {
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  max-height: 90vh;
+  overflow-y: auto; /* 👈 enables vertical scrolling */
   max-width: 400px;
-
   background-color: var(--white-color);
   border: thin solid var(--first-color);
+  box-sizing: border-box;
+}
+
+.modal-window h3 {
+  border-bottom: thin solid var(--first-color);
+  text-align: center;
+  padding: 1rem 0;
+  margin: 0.5rem 0;
+  color: var(--title-color);
+}
+
+.portfolio-details {
+  display: grid;
+  grid-template-columns: 40% 60%;
+  grid-auto-rows: 2rem;
+}
+
+.portfolio-details b {
+  color: var(--first-color);
 }
 
 .modal-window h3 {
