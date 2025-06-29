@@ -200,34 +200,53 @@ p {
 
 /******* Home section  *******/
 
-.hero-image {
-  max-width: 100%;
-  height: auto;
-  background-image: var(--image);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: var(--attachment);
+.hero-image-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Fixed background image (mobile-safe) */
+.hero-image-background {
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  object-fit: cover;
+  background-image: url("Assets/hero-image-home.png");
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
+/* Overlay and content styling */
 .hero-image-opacity {
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--hero-opacity-color);
+  background-color: var(--hero-opacity-color); /* This stays the same */
   text-align: center;
+  position: relative;
+  z-index: 1;
 }
 
 .hero-image-title {
-  font-size: 5vw;
   color: var(--hero-text-color);
+}
+
+/* Optional: responsive tweaks */
+@media (max-width: 768px) {
+  .hero-image-title {
+    font-size: 1.5rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+  }
 }
 
 /********* About Section******/
@@ -559,6 +578,10 @@ progress::-webkit-progress-value {
 
 /******** contact section  ***************/
 
+.contact {
+  background-color: var(--grey-light-color);
+}
+
 .cards {
   margin: 1rem auto;
   justify-content: center;
@@ -800,31 +823,6 @@ progress::-webkit-progress-value {
 
 /* For Mobile - Click Interaction */
 @media (max-width: 600px) {
-  .hero-image {
-    width: 100%;
-    height: auto;
-
-    background-image: var(--image);
-
-    background-position: center;
-    background-attachment: var(--attachment);
-  }
-
-  .hero-image-opacity {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--hero-opacity-color);
-    text-align: center;
-  }
-
-  .hero-image-title {
-    font-size: 5vw;
-    color: var(--hero-text-color);
-  }
-
   .portfolio-card:hover > .portfolio-card-info {
     display: none;
   }
