@@ -208,6 +208,11 @@ p {
   background-size: cover;
   background-position: center;
   background-attachment: var(--attachment);
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .hero-image-opacity {
@@ -795,6 +800,31 @@ progress::-webkit-progress-value {
 
 /* For Mobile - Click Interaction */
 @media (max-width: 600px) {
+  .hero-image {
+    width: 100%;
+    height: auto;
+
+    background-image: var(--image);
+
+    background-position: center;
+    background-attachment: var(--attachment);
+  }
+
+  .hero-image-opacity {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hero-opacity-color);
+    text-align: center;
+  }
+
+  .hero-image-title {
+    font-size: 5vw;
+    color: var(--hero-text-color);
+  }
+
   .portfolio-card:hover > .portfolio-card-info {
     display: none;
   }
